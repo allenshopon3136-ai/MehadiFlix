@@ -24,6 +24,10 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Generate Missing Android & iOS Files
+        run: |
+          flutter create . --platforms=android --org=site.fojik
+
       - name: Get dependencies
         run: flutter pub get
 
